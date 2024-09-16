@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "test": "no test yet",
+    "test": "jest",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
