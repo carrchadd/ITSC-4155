@@ -24,29 +24,24 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies for client
-      run: 
-        cd client
-        npm ci
+      run: npm ci
+      working-directory: ./client
 
     - name: Run client tests
-      run: 
-        cd client
-        npm test
+      run: npm test
+      working-directory: ./client
 
     - name: Install dependencies for server
-      run: 
-        cd server
-        npm ci
+      run: npm ci
+      working-directory: ./server
 
     - name: Start server
-      run: 
-        cd server
-        npm start &
+      run: npm start &
+      working-directory: ./server
 
     - name: Wait for server to be ready
       run: sleep 5
 
     - name: Run server tests
-      run: 
-        cd server
-        npm test
+      run: npm test
+      working-directory: ./server
