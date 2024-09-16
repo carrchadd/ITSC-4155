@@ -7,7 +7,6 @@ function getData() {
 module.exports = {
     print_json: async () => {
         const data = await getData()
-        console.log(data)
         return data.home === "This is the home page"
     },
     math_operations: (a,b,c,d) => {
