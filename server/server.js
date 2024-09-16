@@ -1,8 +1,9 @@
 const express = require("express")
 const app = express()
+const data = require('./home.json')
 
 app.get("/home/api", (req, res) => {
-   res.json({"home": "This is the home page"})
+   res.json(data)
 })
 
 app.listen(5001, () => {
