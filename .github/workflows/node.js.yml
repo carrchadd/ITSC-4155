@@ -37,7 +37,7 @@ jobs:
     - name: Start server
       run: |
         cd server
-        node server.js
+        node server.js &
       working-directory: ./server
 
     - name: Wait for server to be ready
