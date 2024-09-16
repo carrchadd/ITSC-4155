@@ -1,4 +1,4 @@
-const data = require('home.json')
+const data = require('./home.json')
 
 module.exports = {
     print_json: () => {
