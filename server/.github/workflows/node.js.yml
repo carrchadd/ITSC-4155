@@ -43,6 +43,9 @@ jobs:
       run: npm start &
       working-directory: ./server
 
+    - name: Wait for server to be ready
+      run: sleep 5
+
     - name: Test server
       run: |
         cd server
