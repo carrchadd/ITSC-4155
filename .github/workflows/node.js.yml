@@ -27,25 +27,21 @@ jobs:
       run: 
         cd client
         npm ci
-      working-directory: ./client
 
     - name: Run client tests
       run: 
         cd client
         npm test
-      working-directory: ./client
 
     - name: Install dependencies for server
       run: 
         cd server
         npm ci
-      working-directory: ./server
 
     - name: Start server
       run: 
         cd server
         npm start &
-      working-directory: ./server
 
     - name: Wait for server to be ready
       run: sleep 5
@@ -54,7 +50,6 @@ jobs:
       run: 
         cd server
         npm test
-      working-directory: ./server
 
     - name: Stop server
       run: kill $(lsof -t -i:5001)
