@@ -27,3 +27,24 @@ jobs:
     - run: npm ci
 
     - run: npm test
+
+    - name: Install server dependencies
+      run: |
+        cd server
+        npm ci
+      working-directory: ./server
+
+    - name: Start server
+      run: |
+        cd server
+        node server.js
+      working-directory: ./server
+
+    - name: Wait for server to be ready
+      run: sleep 5
+
+    - name: Test server
+      run: |
+        cd server
+        npm test
+      working-directory: ./server
