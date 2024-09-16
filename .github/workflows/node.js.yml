@@ -26,6 +26,8 @@ jobs:
 
     - run: npm ci
 
+    - run: node server.js &
+
     - run: npm test
 
     - name: Install server dependencies
