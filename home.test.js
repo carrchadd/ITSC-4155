@@ -1,4 +1,4 @@
-const { print_json, math_operations } = require("./home");
+const { math_operations } = require("./home");
 
 describe("home js test", () => {
   // it("should test json  ", async () => {
