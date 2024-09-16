@@ -50,6 +50,3 @@ jobs:
       run: 
         cd server
         npm test
-
-    - name: Stop server
-      run: kill $(lsof -t -i:5001)
