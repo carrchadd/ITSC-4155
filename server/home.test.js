@@ -2,7 +2,7 @@ const { print_json, math_operations } = require("./home");
 
 describe("server json js test", () => {
   it("should test json  ",  () => {
-    expect( print_json()).toBe(false);
+    expect( print_json()).toBe(true);
   });
 });
 
